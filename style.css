@@ -1,0 +1,192 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
+
+@font-face {
+    font-display: swap;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/heebo-v21-latin-regular.woff2') format('woff2'),
+         url('./fonts/heebo-v21-latin-regular.woff') format('woff');
+}
+  
+@font-face {
+    font-display: swap;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/heebo-v21-latin-600.woff2') format('woff2'), 
+         url('./fonts/heebo-v21-latin-600.woff') format('woff');
+}
+  
+
+@font-face {
+    font-display: swap;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/heebo-v21-latin-700.woff2') format('woff2'),
+         url('./fonts/heebo-v21-latin-700.woff') format('woff');
+}
+  
+
+:root {
+    --clr-bg: #000;
+    --clr-fg: #fff;
+    --clr-transparent: hsla(0, 0%, 100%, 20%);
+    --clr-accent: #00ff00;
+
+    --width-left: 0%;
+    --width-right: 0%;
+
+    --cs-margin-left: 0px;
+    --cs-margin-right: 0px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+*::selection {
+    background: var(--clr-fg);
+    color: var(--clr-bg);
+}
+
+a {   
+    text-decoration: none;
+}
+
+body {
+    color: var(--clr-fg);
+    background: none;
+    font-family: 'Heebo', sans-serif;
+}
+
+.bar {
+    height: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar-container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-transparent);
+    display: grid;
+}
+
+#bar-left {
+    width: var(--width-left);
+    height: 100%;
+    background-color: var(--clr-accent);
+    justify-self: end;
+    transition: width 200ms;
+}
+
+#bar-right {
+    width: var(--width-right);
+    height: 100%;
+    background-color: var(--clr-accent);
+    transition: width 200ms;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.score {
+    font-size: 1.75rem;
+    transition: font-size 200ms;
+}
+
+.top {
+    font-size: 2.2rem;
+}
+
+.left {
+    text-align: right;
+}
+
+.score .acc {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .8em;
+}
+
+.left .stats {
+    justify-content: flex-end;
+}
+
+.stats i {
+    font-size: .8em;
+}
+
+.misses {
+    color: red;
+}
+
+.spacing {
+    display: none;
+}
+
+/*
+    Uncomment everything below for extra spacing.
+    This will add spacing at the left and right,
+    as well as the middle to fit to the ComfySabers Overlay
+*/
+
+/* body {
+    max-width: 1870px;
+    margin: 0 auto;
+}
+
+.spacing {
+    display: block;
+    height: 100%;
+}
+
+.bar {
+    grid-template-columns: 1fr 30px 1fr;
+}
+
+.container {
+    gap: 30px;
+    margin-left: var(--cs-margin-left);
+    margin-right: var(--cs-margin-right);
+    transition: margin 200ms;
+} */
