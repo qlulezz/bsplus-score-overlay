@@ -164,6 +164,13 @@ body {
     display: none;
 }
 
+.player {
+    display: none;
+    font-size: 2em;
+    padding-top: 8rem;
+    font-weight: bold;
+}
+
 /*
     Uncomment everything below for extra spacing.
     This will add spacing at the left and right,

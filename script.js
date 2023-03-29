@@ -68,11 +68,13 @@ const leftAcc = document.getElementById("left-acc");
 const leftScore = document.getElementById("left-score");
 const leftMisses = document.getElementById("left-misses");
 const leftCombo = document.getElementById("left-combo");
+const leftPlayer = document.getElementById("left-player");
 
 const rightAcc = document.getElementById("right-acc");
 const rightScore = document.getElementById("right-score");
 const rightMisses = document.getElementById("right-misses");
 const rightCombo = document.getElementById("right-combo");
+const rightPlayer = document.getElementById("right-player");
 
 // When a new score packet comes in
 function updateHTML(data) {
@@ -87,7 +89,7 @@ function updateHTML(data) {
     combo: data.Score.Combo
   };
   
-  //const name = data.Score.LUID == players[0].id ? players[0].name : players[1].name
+  const name = data.Score.LUID == players[0].id ? players[0].name : players[1].name
 
   // if the id matches the first player, set its scores
   // else, set the scores for the seconds player
@@ -96,13 +98,13 @@ function updateHTML(data) {
     leftScore.textContent = visible.score;
     leftMisses.textContent = visible.misses;
 	  leftCombo.textContent = visible.combo;
-    //leftCombo.textContent = name;
+    leftPlayer.textContent = name;
   } else {
     rightAcc.textContent = visible.acc;
     rightScore.textContent = visible.score;
     rightMisses.textContent = visible.misses;
     rightCombo.textContent = visible.combo;
-    //rightCombo.textContent = name;
+    rightPlayer.textContent = name;
   }
 }
 
@@ -181,6 +183,10 @@ function checkForSpacingParameter() {
         margin-left: var(--cs-margin-left);
         margin-right: var(--cs-margin-right);
         transition: margin 200ms;
+      }
+
+      .player {
+        display: block;
       }
     `;
     document.head.appendChild(style);
