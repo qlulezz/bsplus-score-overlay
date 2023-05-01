@@ -8,9 +8,11 @@
     <meta name="color-scheme" content="dark light">
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet"
         type="text/css" />
-    <title>Comfy Sabers - Tug Of War</title>
+    <title>BSPlus - Score Overlay</title>
     <link rel="stylesheet" href="./style.css">
-    <script type="application/javascript" src="script.js" defer></script>
+    <script type="text/javascript" src="./script/gifffer.min.js"></script>
+    <script type="application/javascript" src="./script/params.js" defer></script>
+    <script type="application/javascript" src="./script/index.js" defer></script>
 </head>
 
 <body>
@@ -24,28 +26,69 @@
         </div>
     </div>
     <div class="container">
-        <div class="score left">
-            <p class="acc" id="left-acc">00.00%</p>
-            <p id="left-score">0</p>
+        <div class="score leftPlayer">
+            <p class="acc">0.00%</p>
+            <p class="points">0</p>
             <div>
                 <div class="stats">
-                    <p id="left-combo">0</p>
+                    <p class="combo">0</p>
                     <i class="fa-solid fa-xmark misses"></i>
-                    <p class="misses" id="left-misses">0</p>
+                    <p class="miss">0</p>
                 </div>
-                <p class="player" id="left-player">Left Player</p>
             </div>
         </div>
-        <div class="score right">
-            <p class="acc" id="right-acc">00.00%</p>
-            <p id="right-score">0</p>
+        <div class="score rightPlayer">
+            <p class="acc">0.00%</p>
+            <p class="points">0</p>
             <div>
                 <div class="stats">
-                    <p id="right-combo">0</p>
+                    <p class="combo">0</p>
                     <i class="fa-solid fa-xmark misses"></i>
-                    <p class="misses" id="right-misses">0</p>
+                    <p class="miss">0</p>
                 </div>
-                <p class="player" id="right-player">Right Player</p>
+            </div>
+        </div>
+    </div>
+    <div class="players">
+        <div class="player leftPlayerInfo">
+            <div class="scoresaber">
+                <div>
+                    <img src="#" alt="" class="SSAvatar" onerror="this.onerror=null;this.src='./no-avatar.jpg';">
+                </div>
+                <div>
+                    <p class="playerName SSName">Left Player Name</p>
+                    <p class="SSRank">Left Player Rank</p>
+                </div>
+            </div>
+
+            <div class="beatleader">
+                <div>
+                    <img src="#" alt="" class="BLAvatar" onerror="this.onerror=null;this.src='./no-avatar.jpg';">
+                </div>
+                <div>
+                    <p class="playerName BLName">Left Player Name</p>
+                    <p class="BLRank">Left Player Rank</p>
+                </div>
+            </div>
+        </div>
+        <div class="player rightPlayerInfo">
+            <div class="scoresaber">
+                <div>
+                    <p class="playerName SSName">Right Player Name</p>
+                    <p class="SSRank">Right Player Rank</p>
+                </div>
+                <div>
+                    <img src="#" alt="" class="SSAvatar" onerror="this.onerror=null;this.src='./no-avatar.jpg';">
+                </div>
+            </div>
+            <div class="beatleader">
+                <div>
+                    <p class="playerName BLName">Right Player Name</p>
+                    <p class="BLRank">Right Player Rank</p>
+                </div>
+                <div>
+                    <img src="#" alt="" class="BLAvatar" onerror="this.onerror=null;this.src='./no-avatar.jpg';">
+                </div>
             </div>
         </div>
     </div>
