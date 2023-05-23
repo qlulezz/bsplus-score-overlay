@@ -167,6 +167,14 @@ body {
     color: var(--clr-misses);
 }
 
+.stats svg {
+    max-height: 1em;
+}
+
+.stats svg path {
+    fill: var(--clr-misses);
+}
+
 .spacing {
     display: block;
     height: 100%;
