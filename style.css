@@ -195,7 +195,7 @@ body {
 
 .leftPlayerInfo,
 .rightPlayerInfo {
-    display: flex;
+    display: none;
     gap: 10px;
     font-size: 1.5rem;
 }

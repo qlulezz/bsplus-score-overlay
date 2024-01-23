@@ -116,6 +116,7 @@ async function updateHTML() {
     playerScoreEl.querySelector('.miss').textContent = player.score.missCount;
 
     if (prevPlayerIDs[`player${playerID}`] !== player.ssid) {
+      playerInfoEl.style.display = "flex";
       const SSInfo = await getPlayerInfo("scoresaber", player.ssid);
       const BLInfo = await getPlayerInfo("beatleader", player.ssid);
 
